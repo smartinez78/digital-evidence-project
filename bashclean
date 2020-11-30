@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# this bash script will look through file1.csv and select only the lines that have 'Delivered' or 'Sent' as the status
+# these lines will be moved to file2.csv for further processing
+
+awk -F"," '$5 == "Delivered"' file1.csv >> file2.csv
+awk -F"," '$5 == "Sent"' file1.csv >> file2.csv
+
